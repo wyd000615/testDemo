@@ -1,0 +1,9 @@
+# Project exclude paths
+/com.test/target/
+/demo.database/target/
+/demo.kafka/target/
+/demo.rocketMq/target/
+/demo.shiro/target/
+/enDemo/target/
+/jsDemo/target/
+/testredis/target/
