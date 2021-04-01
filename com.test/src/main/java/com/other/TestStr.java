@@ -366,5 +366,8 @@ public class TestStr {
     public void RegexExample3() {
     String str =" businessStatus";
         System.out.println(str);
+        System.out.println("测试git切分支");
+        System.out.println("测试git切分支2222");
+        System.out.println("测试git切分支33333");
     }
 }
