@@ -603,10 +603,10 @@ public class TestLee {
 //    次⽅＋3的三次⽅。在2000以内的数字。
     @Test
     public void test17() {
-        for(int i=100;i<1000;i++){
+        for (int i = 100; i < 1000; i++) {
             Boolean aBoolean = queryFollow(i);
-            if(aBoolean){
-                System.out.println("===="+i);
+            if (aBoolean) {
+                System.out.println("====" + i);
             }
         }
     }
@@ -614,17 +614,18 @@ public class TestLee {
     public Boolean queryFollow(int n) {
         int a, b, c = 0;
         a = n / 100;
-        b = (n%100) / 10;
+        b = (n % 100) / 10;
         c = n % 10;
-        if(n==153){
-            System.out.println("==n="+n+"==="+a+"===b==="+b+"===c=="+c);
+        if (n == 153) {
+            System.out.println("==n=" + n + "===" + a + "===b===" + b + "===c==" + c);
 
         }
-        if (a * a * a + b * b*b + c*c*c == n) {
+        if (a * a * a + b * b * b + c * c * c == n) {
             return true;
         }
         return false;
     }
+
     //猴⼦吃桃问题：猴⼦第⼀天摘下若⼲个桃⼦，当即吃了⼀半，还不瘾，⼜多吃
     //了⼀个 第⼆天早上⼜ 将剩下的桃⼦吃掉⼀半，⼜多吃了⼀个。以后每天早上都吃
     //了前⼀天剩下的⼀半零⼀个。到第 10 天早上想再吃时，⻅只 剩下⼀个桃⼦了。求
@@ -638,17 +639,18 @@ public class TestLee {
         int i = eatPeach(1);
         System.out.println(i);
     }
-    public int eatPeach(int day){
-        if(day==10){
+
+    public int eatPeach(int day) {
+        if (day == 10) {
             return 1;
         }
 
-        int num =( eatPeach(day+1)+1)*2;
-        System.out.println("==="+day+"==="+num);
+        int num = (eatPeach(day + 1) + 1) * 2;
+        System.out.println("===" + day + "===" + num);
         return num;
     }
-   // 有⼀分数序列：2/1，3/2，5/3，8/5，13/8，21/13...求出这个数列的前 20
-   // 项之和。
+    // 有⼀分数序列：2/1，3/2，5/3，8/5，13/8，21/13...求出这个数列的前 20
+    // 项之和。
 /*
     1   1     1
     2    2
@@ -656,11 +658,11 @@ public class TestLee {
     4    5*/
 
 
-   @Test
-   public void test19() {
+    @Test
+    public void test19() {
 
 
-   }
+    }
   /*  public int math(int num){
         if(num ==1){
             return  2/1;
@@ -677,47 +679,52 @@ public class TestLee {
         math(5);
 
     }
-    public int math(int num){
-       if(num ==1){
-           return 10;
-       }
-       int sum = math(num-1)+2;
-        System.out.println("==="+num+"==="+sum);
-       return sum;
+
+    public int math(int num) {
+        if (num == 1) {
+            return 10;
+        }
+        int sum = math(num - 1) + 2;
+        System.out.println("===" + num + "===" + sum);
+        return sum;
     }
-    public  int Test(int num){
-        int count=0;
-        while(num>0){
-            if((num & 1) ==1){
+
+    public int Test(int num) {
+        int count = 0;
+        while (num > 0) {
+            if ((num & 1) == 1) {
                 count++;
             }
-            num=num>>1;
+            num = num >> 1;
         }
         return count;
     }
+
     @Test
     public void test21() {
-        int i=666;
+        int i = 666;
         System.out.println(Integer.toBinaryString(i));
         System.out.println(Test(i));
     }
+
     @Test
     public void test22() {
         HashMap<Object, Object> objectObjectHashMap = new HashMap<>();
-        int i=6;
+        int i = 6;
         String s = Integer.toBinaryString(i);
         System.out.println(Integer.toBinaryString(i));
-        int j=5;
+        int j = 5;
         System.out.println(Integer.toBinaryString(j));
         //System.out.println(Test(i));
-        System.out.println(i&j);
-        System.out.println(Integer.toBinaryString(i&j));
+        System.out.println(i & j);
+        System.out.println(Integer.toBinaryString(i & j));
 
 
     }
+
     /**
      * 判断单链表是否存在环
-     * @param head
+
      * @return
      *//*
     public static <T> boolean isLoopList(ListNode<T> head){
@@ -737,4 +744,57 @@ public class TestLee {
         }
         return false;
     }*/
+/*
+    N个人围成一圈，从第一个人开始报数，
+    报到m的人出圈，剩下的人继续从1开始报数，报到m的人出圈；
+    如此往复，直到所有人出圈。（模拟此过程，输出出圈的人的序号）
+    */
+    @Test
+    public void test23() {
+
+    }
+
+    public int yuesefu(ArrayList<Integer> list, int m) {
+        if (list.size() == 1) {
+            return list.get(0);
+        }
+        //
+        int j = 0;
+        if (m > list.size()) {
+            m = m % list.size();
+        }
+        for (int i = 0; i < list.size(); i++) {
+            if (i == m) {
+                j = i;
+                break;
+            }
+        }
+        Integer remove = list.remove(j);
+
+        return remove;
+    }
+    public static void yuesefu(int totalNum, int countNum) {
+        // 初始化人数
+        List<Integer> start = new ArrayList<Integer>();
+        for (int i = 1; i <= totalNum; i++) {
+            start.add(i);
+        }
+        // 从第K个开始计数
+        int k = 0;
+        while (start.size() > 0) {
+            k = k + countNum;
+            // 第m人的索引位置
+            k = k % (start.size()) - 1;
+            // 判断是否到队尾
+            if (k < 0) {
+                System.out.println(start.get(start.size() - 1));
+                start.remove(start.size() - 1);
+                k = 0;
+            } else {
+                System.out.println(start.get(k));
+                start.remove(k);
+            }
+        }
+    }
+
 }

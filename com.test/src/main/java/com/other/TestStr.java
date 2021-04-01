@@ -362,4 +362,9 @@ public class TestStr {
     static void cnn() {
         System.out.print("CNN ");
     }
+    @Test
+    public void RegexExample3() {
+    String str =" businessStatus";
+        System.out.println(str);
+    }
 }
