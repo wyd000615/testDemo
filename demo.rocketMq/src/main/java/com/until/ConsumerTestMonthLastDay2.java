@@ -7,13 +7,13 @@ import org.apache.rocketmq.client.exception.MQClientException;
 import org.apache.rocketmq.common.consumer.ConsumeFromWhere;
 import org.apache.rocketmq.common.message.MessageExt;
 
-import java.nio.charset.StandardCharsets;
+//import java.nio.charset.StandardCharsets;
 import java.sql.Timestamp;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class ConsumerTestMonthLastDay2 {
-
+ /*
     public static DefaultMQPushConsumer initSuccessConsumerOrder() {
 
         DefaultMQPushConsumer defaultMQPushConsumer = new DefaultMQPushConsumer("successConsumer");
@@ -25,7 +25,7 @@ public class ConsumerTestMonthLastDay2 {
             defaultMQPushConsumer.setConsumeMessageBatchMaxSize(100);
             defaultMQPushConsumer.setConsumeThreadMax(100);
             defaultMQPushConsumer.registerMessageListener((MessageListenerOrderly) (msgs, context) -> {
-                //每个月 月底开启
+             //每个月 月底开启
                 SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
                 //获取当前时间
                 long currTime = System.currentTimeMillis();
@@ -70,5 +70,5 @@ public class ConsumerTestMonthLastDay2 {
     public static void main(String[] args) throws MQClientException {
         DefaultMQPushConsumer defaultMQPushConsumer = initSuccessConsumerOrder();
     }
-
+*/
 }

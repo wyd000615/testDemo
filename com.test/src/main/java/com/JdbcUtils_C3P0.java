@@ -7,7 +7,7 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.Properties;
 
-import com.mchange.v2.c3p0.ComboPooledDataSource;
+//import com.mchange.v2.c3p0.ComboPooledDataSource;
 
 /**
  * @ClassName: JdbcUtils_C3P0
@@ -16,7 +16,7 @@ import com.mchange.v2.c3p0.ComboPooledDataSource;
  * @date: 2014-10-4 下午6:04:36
  *
  */
-public class JdbcUtils_C3P0 {
+public class JdbcUtils_C3P0{} /*{
 
     private static ComboPooledDataSource ds = null;
     //在静态代码块中创建数据库连接池
@@ -36,7 +36,7 @@ public class JdbcUtils_C3P0 {
             //通过读取C3P0的xml配置文件创建数据源，C3P0的xml配置文件c3p0-config.xml必须放在src目录下
            // ds = new ComboPooledDataSource();//使用C3P0的默认配置来创建数据源
             //ds = new ComboPooledDataSource("Oracle");//使用C3P0的命名配置来创建数据源
-          /*  InputStream in = jdbcUtils_DBCP.class.getClassLoader().getResourceAsStream("c3p0-config.xml");
+          *//*  InputStream in = jdbcUtils_DBCP.class.getClassLoader().getResourceAsStream("c3p0-config.xml");
             Properties prop = new Properties();
             prop.put("driverClassName","oracle.jdbc.driver.OracleDriver");
             prop.put("url","jdbc:oracle:thin:@10.161.50.88:1530:TDB");
@@ -48,7 +48,7 @@ public class JdbcUtils_C3P0 {
             prop.put("minIdle","5");
             prop.put("maxWait","60000");
             prop.load(in);
-*/
+*//*
             // System.out.println(ds);
         }catch (Exception e) {
             throw new ExceptionInInitializerError(e);
@@ -57,19 +57,19 @@ public class JdbcUtils_C3P0 {
 
 
 
-    /**
+    *//**
      * @Method: getConnection
      * @Description: 从数据源中获取数据库连接
      * @Anthor:孤傲苍狼
      * @return Connection
      * @throws SQLException
-     */
+     *//*
     public static Connection getConnection() throws SQLException{
         //从数据源中获取数据库连接
         return ds.getConnection();
     }
 
-    /**
+    *//**
      * @Method: release
      * @Description: 释放资源，
      * 释放的资源包括Connection数据库连接对象，负责执行SQL命令的Statement对象，存储查询结果的ResultSet对象
@@ -78,7 +78,7 @@ public class JdbcUtils_C3P0 {
      * @param conn
      * @param st
      * @param rs
-     */
+     *//*
     public static void release(Connection conn,Statement st,ResultSet rs){
         if(rs!=null){
             try{
@@ -107,4 +107,4 @@ public class JdbcUtils_C3P0 {
             }
         }
     }
-}
+}*/

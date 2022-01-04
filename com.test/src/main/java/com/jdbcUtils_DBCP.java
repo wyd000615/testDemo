@@ -11,15 +11,15 @@ import java.util.Properties;
 
 import javax.sql.DataSource;
 
-import org.apache.commons.dbcp2.BasicDataSourceFactory;
+//import org.apache.commons.dbcp2.BasicDataSourceFactory;
 
 
-public class jdbcUtils_DBCP {
+public class jdbcUtils_DBCP {}/*{
 
-    /**
+    *//**
      * 在java中，编写数据库连接池需实现java.sql.DataSource接口，每一种数据库连接池都是DataSource接口的实现
      * DBCP连接池就是java.sql.DataSource接口的一个具体实现
-     */
+     *//*
     private  static DataSource ds = null;
 
 
@@ -84,4 +84,4 @@ public class jdbcUtils_DBCP {
     }
 
 
-}
+}*/

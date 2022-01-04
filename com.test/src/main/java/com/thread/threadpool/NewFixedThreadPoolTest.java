@@ -13,8 +13,8 @@ import java.util.concurrent.Executors;
 public class NewFixedThreadPoolTest {
     public static void main(String[] args) {
         // 创建一个可重用固定个数的线程池
-        ExecutorService fixedThreadPool = Executors.newFixedThreadPool(1);
-        for (int i = 0; i <10000 ; i++) {
+        ExecutorService fixedThreadPool = Executors.newFixedThreadPool(2);
+        for (int i = 0; i <6 ; i++) {
             fixedThreadPool.execute(new Runnable() {
 
                 @Override

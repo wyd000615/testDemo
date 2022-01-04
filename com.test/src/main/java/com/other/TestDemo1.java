@@ -1240,7 +1240,7 @@ public class TestDemo1 {
         apiQrySql.append(" left join  dbvop.discnt_subscribe ds on ds.prod_subscribe_id= ps.prod_subscribe_id and ds.MVNO_BUSINESS_MARK=? and ds.discnt_id in (?)");
         apiQrySql.append(" left join dbvop.life_user_type lut on lut.mvno_user_id=mu.mvno_user_id and lut.mvno_mark=? and to_char(lut.begin_time,'yyyymm')<=? and to_char(lut.end_time,'yyyymm')>=?");
         apiQrySql.append(" where sis.MVNO_BUSINESS_MARK=? and mu.MVNO_BUSINESS_MARK=? and  sis.mvno_user_id=mu.mvno_user_id and sis.order_time <=? and (sis.unsub_time >= ? or sis.unsub_time is null) ");
-        apiQrySql.append(" and sis.service_inst=? ) dpm ) d where d.RN=1");
+        apiQrySql.append(" and sis.service_inst=? ) dpm ) d.txt where d.txt.RN=1");
         System.out.println(apiQrySql);
     }
 }

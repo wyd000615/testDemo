@@ -10,7 +10,7 @@ public class OneQuestionPerDay {
     public void test1() {
      /*   输入：00000000000000000000000000001011
         输出：3
-        解释：输入的二进制串 00000000000000000000000000001011 中，共有三位为 '1'。
+        解释：输入的二进制串 00000000000000000000000000001011中，共有三位为 '1'。
 
         来源：力扣（LeetCode）
         链接：https://leetcode-cn.com/problems/number-of-1-bits

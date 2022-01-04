@@ -1,13 +1,13 @@
 package en;
 
-import com.n3.ecs.open.util.SignUtil;
+//import com.n3.ecs.open.util.SignUtil;
 import org.junit.Test;
 
 public class enDemo {
-    /**
+/*    *//**
      * 解密
      * @throws Exception
-     */
+     *//*
     @Test
     public void test() throws Exception {
         String str ="3DD06A2033716899BBB4363E8B81D7098D49787D7255FE5DB86C48FFCD91069FED55BC04A9FC7F3693BE2952D912E4746263EDBF9F2395B16FED1BBB53F444B8F6F22EA49E55AE5C379F9F42AC97A9A3A6F044607E56C785E8D06A511321AA111490DF1A394EC228571900CD057D594031BC054A68CCB14C1726C748535520330ED015D894A2BC181D497FCC24EFBD8A6B1E45B040E9D77FB6238D0F3E23E695CB05A894CCA6EAF65D64D4E150616B747F40724BFFD0B9B39B5B2F25A5ED4DCB8A40710DBFD3D88C70ACCB466EA3695E663E01587F65E7A9EA5D1F3B4B95D40858A480B37572A6EB32A6FDC5BF0F1D30";
@@ -16,10 +16,10 @@ public class enDemo {
        String result = SignUtil.decrypt(str, "1111111111111111111111");
         System.out.println(result);
     }
-    /**
+    *//**
      * 加密
      * @throws Exception
-     */
+     *//*
     @Test
     public void test01() throws Exception {
         String str ="123";
@@ -92,7 +92,7 @@ public class enDemo {
         str =str.trim();
         String result = SignUtil.decrypt(str, "1111111111111111");
         System.out.println(result);
-    }
+    }*/
     @Test
     public void test10() throws Exception {
         String str ="3A7DE93212C77860B89FAE7E204639AF";
@@ -110,6 +110,15 @@ public class enDemo {
     @Test
     public void test12() throws Exception {
         String str ="tydicxdrqaz";
+        String encryption ="asdfghjkl0iuytbc";
+        //String encrypt1 = SignUtil.encrypt(str, encryption);
+        String encrypt =AesUtils.encrypt(encryption,str);
+        System.out.println(encrypt);
+    }
+    //1.4 mysql
+    @Test
+    public void test112() throws Exception {
+        String str ="Ro@zsc2019";
         String encryption ="asdfghjkl0iuytbc";
         //String encrypt1 = SignUtil.encrypt(str, encryption);
         String encrypt =AesUtils.encrypt(encryption,str);
@@ -141,9 +150,20 @@ public class enDemo {
     }
     @Test
     public void test16() throws Exception {
-        String str ="y4xcNXXX6n3PPH5WY8ntng==";
+        String str ="D6L0bc5odTqK4/W83s6eJMz184ftYQG2wHX2MVSM24hS7tmbwF8/qLGSbPcwN7y5OUIUMxhjp4AgL0NZV9lmNZMno0RMvHiYgN0WOeO/Ik/1gmCiHXOHPammHbHBOuL3njf94yyE15CkSmsd3jSWuKCci4QzX937qpsN503S3BU=";
         str =str.trim();
         String result = AesUtils.decrypt(str, "asdfghjkl0iuytbc");
         System.out.println(result);
+    }
+    @Test
+    public void test17() throws Exception {
+
+        String str ="adgn51474d6e000feedbf8f780290fe1";
+        String encryption ="asdfghjkl0iuytbc";
+        //String encrypt1 = SignUtil.encrypt(str, encryption);
+        String encrypt =AesUtils.encrypt(encryption,str);
+        System.out.println(encrypt);
+       // adgn51474d6e000feedbf8f780290fe1
+        //NaU131QNUcyHas05vL9n1QxLtsuFPTzO
     }
 }

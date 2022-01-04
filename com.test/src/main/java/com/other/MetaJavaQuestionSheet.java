@@ -323,8 +323,8 @@ class MetaJavaQuestionSheet {
         String a = "没人";
         String b = "比我";
         String c = "更懂";
-        String d = "java";
-        String s = a + b + c + d;
+        String d.txt = "java";
+        String s = a + b + c + d.txt;
 
         A. 6
 
@@ -339,15 +339,15 @@ class MetaJavaQuestionSheet {
 
 
     /* qn13:
-        若进栈序列为a，b，c，d，e，f，进栈和出栈可以穿插进行，则不可能出现的出栈序列是()
+        若进栈序列为a，b，c，d.txt，e，f，进栈和出栈可以穿插进行，则不可能出现的出栈序列是()
 
-        A. d，c，b，a，e，f
+        A. d.txt，c，b，a，e，f
 
-        B. c，b，d，a，f，e
+        B. c，b，d.txt，a，f，e
 
-        C. b，c，e，a，f，d
+        C. b，c，e，a，f，d.txt
 
-        D. b，d，c，a，e，f
+        D. b，d.txt，c，a，e，f
     */
     public static String qn13 = "A";
 
@@ -476,14 +476,14 @@ class MetaJavaQuestionSheet {
      * 显然叶子节点是 value 类型为 Number 或 String的节点,
      * 将 Map 转为多条字符串, 每条字符串表达其中一个叶子节点,
      * 比如:
-     * {"a":{"b":["v",2,{"c":0}]},"d":[1,null,3]}
+     * {"a":{"b":["v",2,{"c":0}]},"d.txt":[1,null,3]}
      * 将转化为以下这些字符串
      * a.b[0] = v
      * a.b[1] = 2
      * a.b[2].c = 0
-     * d[0] = 1
-     * d[1] = null
-     * d[2] = 3
+     * d.txt[0] = 1
+     * d.txt[1] = null
+     * d.txt[2] = 3
      *
      * @param map 上述的 map
      * @return 所有的字符串
